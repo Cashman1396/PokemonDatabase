@@ -1,0 +1,2 @@
+class PokemonDatabase::Pokedex
+end 
