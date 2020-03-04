@@ -10,8 +10,8 @@ Gem::Specification.new do |spec|
   spec.email         = ["'chrisashman96@gmail.com'"]
 
   spec.summary       = "Ruby CLI Pokemon Database"
-  spec.description   = "Provides a List of all the Pokemon in the Database"
-  spec.homepage      = "https://github.com/REPO"
+  spec.description   = "Provides a list of all the Pokemon in the Pokedex from Generations 1 to 8"
+  spec.homepage      = "https://github.com/Cashman1396/PokemonDatabase"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
