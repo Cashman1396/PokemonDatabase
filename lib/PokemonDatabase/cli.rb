@@ -17,5 +17,23 @@ PokemonDatabase::CLI
   puts "Enter '5' to view Pokemon numbers 601 to 750"
   puts "Enter '6' to view Pokemon numbers 751 to 890"
   puts "Enter 'exit' to end program"
+  input = ""
+  if input == "1"
+    national_pokedex_list(0)
+  elsif input == "2"
+    national_pokedex_list(151)
+  elsif input == "3"
+    national_pokedex_list(301)
+  elsif input == "4"
+    national_pokedex_list(451)
+  elsif input == "5"
+    national_pokedex_list(601)
+  elsif input == "6"
+    national_pokedex_list(751)
+  elsif input == "exit"
+    turn_off
+    exit
+
+
 
 end
