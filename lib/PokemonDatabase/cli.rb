@@ -81,3 +81,5 @@ class PokemonDatabase::CLI
   def turn_off
     puts "The Portable Pokemon Database will now turn off, See ya Later!"
   end
+
+end
