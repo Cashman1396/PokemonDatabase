@@ -1,4 +1,4 @@
-PokemonDatabase::CLI
+class PokemonDatabase::CLI
 
     def call
       puts "Welcome to the Portable Pokemon Database!"
@@ -41,7 +41,7 @@ PokemonDatabase::CLI
 
   def national_pokedex_list(first)
     last = first + 149
-    if PokemonCLI::Pokemon.all_pokemon[last+1..-1].count < 150
+    if PokemonDatabase::Pokemon.all_pokemon[last+1..-1].count < 150
       last = -1
     end
     all_national = PokemonDatabase::Pokedex.all_national[first..last]
@@ -81,5 +81,3 @@ PokemonDatabase::CLI
   def turn_off
     puts "The Portable Pokemon Database will now turn off, See ya Later!"
   end
-
-end
