@@ -25,6 +25,6 @@ class PokemonDatabase::Scraper
     pokemon.height = doc.search('tr td')[3].text
     pokemon.weight = doc.search('tr td')[4].text
     pokemon.type = doc.search('tr td a')[0].text
-    pokemon.type += "/#{doc.search}"
+    pokemon.type += "/#{doc.search('tr td a')[1].text}" if doc.search('tr td a')[1] == "Fire" || doc.search('tr td a')[1].text == "Poison" || doc.search('tr td a')[1].text == "Water" || doc.search('tr td a')[1].text == "Grass" ||
 
   end
