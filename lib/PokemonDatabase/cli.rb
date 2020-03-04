@@ -2,7 +2,7 @@ PokemonDatabase::CLI
 
     def call
       puts "Welcome to the Portable Pokemon Database!"
-      PokemonDatabase::Scraper.all_pokemon
+      PokemonDatabase::Scraper.get_all_pokemon
       national_pokedex_list
       menu
       turn_off
@@ -35,7 +35,7 @@ PokemonDatabase::CLI
         exit
       else
         puts "Who's that Pokemon!!"
-        menu
+        national_pokedex_list
       end
     end
 
