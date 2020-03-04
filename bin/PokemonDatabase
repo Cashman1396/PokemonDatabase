@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+require 'PokemonDatabase'
+
+PokemonDatabase::CLI.new.call
