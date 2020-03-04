@@ -1,6 +1,6 @@
 class PokemonDatabase::Pokedex
 
- attr_accessor :name, :number, :type, :abilities, :height, :weight, :weakness, :species
+ attr_accessor :name, :number, :info, :type, :abilities, :height, :weight, :weakness, :species, :count
 
  @@all_national = []
 

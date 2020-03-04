@@ -10,25 +10,22 @@ class PokemonDatabase::CLI
 
     def national_pokedex
       input = ""
-      puts "Enter '1' to view Pokemon numbers 1 to 250"
-      puts "Enter '2' to view Pokemon numbers 251 to 500"
-      puts "Enter '3' to view Pokemon numbers 501 to #{PokemonDatabase::Pokedex.all_national.count} or type 'exit' to close the program"
-      #puts "Enter '4' to view Pokemon numbers 451 to 600"
-      #puts "Enter '5' to view Pokemon numbers 601 to 750"
-      #puts "Enter '6' to view Pokemon numbers 751 to 890 or enter 'exit' to end program"
+      puts "Enter '1' to view Pokemon numbers 1 to 150"
+      puts "Enter '2' to view Pokemon numbers 151 to 300"
+      puts "Enter '3' to view Pokemon numbers 301 to 450"
+      puts "Enter '4' to view Pokemon numbers 451 to 600"
+      puts "Enter '5' to view Pokemon numbers 601 to #{PokemonDatabase::Pokedex.all_national.count} or type 'exit' to close the program"
       input = gets.downcase.strip
         if input == "1"
           national_pokedex_group(0)
         elsif input == "2"
-          national_pokedex_group(250)
+          national_pokedex_group(150)
         elsif input == "3"
-          national_pokedex_group(500)
-      #elsif input == "4"
-        #national_pokedex(450)
-      #elsif input == "5"
-        #national_pokedex(600)
-      #elsif input == "6"
-        #national_pokedex(750)
+          national_pokedex_group(300)
+        elsif input == "4"
+          national_pokedex_group(450)
+        elsif input == "5"
+          national_pokedex_group(600)
         elsif input == "exit"
           turn_off
           exit
@@ -39,8 +36,8 @@ class PokemonDatabase::CLI
       end
 
   def national_pokedex_group(first)
-    last = first + 249
-    if PokemonDatabase::Pokedex.all_national[last+1..-1].count < 250
+    last = first + 149
+    if PokemonDatabase::Pokedex.all_national[last+1..-1].count < 150
       last = -1
     end
     all_national = PokemonDatabase::Pokedex.all_national[first..last]
@@ -72,7 +69,7 @@ class PokemonDatabase::CLI
         national_pokedex
       elsif input == "exit"
       else
-        puts "Please Try Again"
+        puts "Please Try Again."
       end
     end
   end
