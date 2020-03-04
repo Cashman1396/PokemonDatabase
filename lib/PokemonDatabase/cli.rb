@@ -39,7 +39,36 @@ PokemonDatabase::CLI
       end
     end
 
-  def
+  def national_pokedex_list(first)
+    last = first + 149
+    if PokemonCLI::Pokemon.all_pokemon[last+1..-1].count < 150
+      last = -1
+    end
+    all_national = PokemonDatabase::Pokedex.all_national[first..last]
+    all_national.each do |pokemon|
+      puts "#{pokemon.number}. #{pokemon.name}"
+    end
+  end
+
+  def menu
+    input = ""
+    @all_national = PokemonDatabase::Pokedex
+    while input != 'exit'
+      puts "Please enter a Pokemon number to learn about that Pokemon or type 'menu' to return to the Main Menu"
+      input = gets.downcase.strip
+
+      if input.to_i > 0 && input.to_i <= PokemonDatabase::Pokedex.all_national.count
+        pokemon = @all_national[input.to_i - 1]
+        PokemonDatabase::Scraper.get_attributes(pokemon) if pokemon.info == nil
+        puts pokemon.info
+        puts "Name: #{pokemon.name}"
+        puts "Number #{pokemon.number}"
+        puts "Type: #{pokemon.type}"
+        puts "Species: #{pokemon.species}"
+        puts "Height: #{pokemon.height}"
+        puts "Weight: #{pokemon.weight}"
+        #returns all pokemon information
+
 
 
 
