@@ -67,9 +67,19 @@ PokemonDatabase::CLI
         puts "Species: #{pokemon.species}"
         puts "Height: #{pokemon.height}"
         puts "Weight: #{pokemon.weight}"
+        puts "Ability: #{pokemon.abilities}"
         #returns all pokemon information
+      elsif input == "menu"
+        national_pokedex_list
+      elsif input == "exit"
+      else
+        puts "Please Try Again"
+      end
+    end
+  end
 
-
-
+  def turn_off
+    puts "The Portable Pokemon Database will now turn off, See ya Later!"
+  end
 
 end
