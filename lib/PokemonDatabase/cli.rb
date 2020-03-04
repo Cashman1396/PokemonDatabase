@@ -63,7 +63,7 @@ class PokemonDatabase::CLI
         puts "Species: #{pokemon.species}"
         puts "Height: #{pokemon.height}"
         puts "Weight: #{pokemon.weight}"
-        #puts "Ability: #{pokemon.abilities}"
+        puts "Ability: #{pokemon.abilities}"
         #returns all pokemon information
       elsif input == "menu"
         national_pokedex
