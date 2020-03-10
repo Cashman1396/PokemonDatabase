@@ -30,7 +30,7 @@ class PokemonDatabase::CLI
           turn_off
           exit
         else
-          puts "Whose that Pokemon!!"
+          puts "Please Try Again"
           national_pokedex
         end
       end
