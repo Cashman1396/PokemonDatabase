@@ -26,7 +26,7 @@ class PokemonDatabase::CLI
           national_pokedex_group(450)
         elsif input == "5"
           national_pokedex_group(600)
-        elsif input == "exit"
+        elsif input == "exit" || input == "esc"
           turn_off
           exit
         else
@@ -63,11 +63,11 @@ class PokemonDatabase::CLI
         puts "Species: #{pokemon.species}"
         puts "Height: #{pokemon.height}"
         puts "Weight: #{pokemon.weight}"
-        puts "Ability: #{pokemon.abilities}"
+        puts "Ability: #{pokemon.abilities} "
         #returns all pokemon information
       elsif input == "menu"
         national_pokedex
-      elsif input == "exit"
+      elsif input == "exit" || "esc"
       else
         puts "Please Try Again."
       end
