@@ -67,7 +67,7 @@ class PokemonDatabase::CLI
         #returns all pokemon information
       elsif input == "menu"
         national_pokedex
-      elsif input == "exit" ||
+      elsif input == "exit"
       else
         puts "Who's That Pokemon!"
       end

@@ -7,11 +7,11 @@ class PokemonDatabase::Scraper
 
   def self.create_pokemon
     #receives the information from the website
-    get_all_pokemon.css("tr").drop(1).each do |a|
-      name = a.css("td a.ent-name").text
-      if PokemonDatabase::Pokedex.all_national.find {|o| o.name == name } == nil
+    get_all_pokemon.css("tr").drop(1).each do |x|
+      name = x.css("td a.ent-name").text
+      if PokemonDatabase::Pokedex.all_national.find {|a| a.name == name } == nil
         pokemon = PokemonDatabase::Pokedex.new
-        pokemon.number = a.css("span.infocard-cell-data").text
+        pokemon.number = x.css("span.infocard-cell-data").text
         pokemon.name = name
         PokemonDatabase::Pokedex.all_national << pokemon
       end
