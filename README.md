@@ -22,7 +22,8 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To run your Portable Pokemon database. First run bundle install to get your dependencies. Then use the chmod to make it editable and usable. After that, play around to your hearts content!
+Warning: Certain Pokemon will crash the Database, these include: Nidoran(male)/Nidoran(female), Mr. Mime, Farfetch'd, Mime jr. Flabebe, all of the Tapus, Mr. Rime, and Sirfetch'd.
 
 ## Development
 
